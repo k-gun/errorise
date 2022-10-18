@@ -6,7 +6,7 @@ use KGun\Errorise\ErrorException;
 class ErrorExceptionTest extends PHPUnit\Framework\TestCase
 {
     function testAll() {
-        $e = new ErrorException(
+        $ex = new ErrorException(
             $message  = 'mkdir(): No such file or directory',
             $code     = 0,
             $severity = E_ERROR,
@@ -14,14 +14,16 @@ class ErrorExceptionTest extends PHPUnit\Framework\TestCase
             $line     = 0,
         );
 
-        $this->assertSame($severity, $e->getSeverity());
-        $this->assertSame($message, $e->getMessage());
-        $this->assertSame($code, $e->getCode());
-        $this->assertSame($file, $e->getFile());
-        $this->assertSame($line, $e->getLine());
-        $this->assertSame(null, $e->getPrevious());
+        $this->assertInstanceOf(\ErrorException::class, $ex);
 
-        $this->assertNull($e->error());
-        $this->assertSame('No such file or directory', $e->getPureMessage());
+        $this->assertSame($severity, $ex->getSeverity());
+        $this->assertSame($message, $ex->getMessage());
+        $this->assertSame($code, $ex->getCode());
+        $this->assertSame($file, $ex->getFile());
+        $this->assertSame($line, $ex->getLine());
+        $this->assertSame(null, $ex->getPrevious());
+
+        $this->assertNull($ex->error());
+        $this->assertSame('No such file or directory', $ex->getPureMessage());
     }
 }
