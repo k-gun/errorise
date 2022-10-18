@@ -1,5 +1,5 @@
 <?php
-namespace Errorise;
+namespace KGun\Errorise;
 
 // Register autoload.
 spl_autoload_register(function ($name) {

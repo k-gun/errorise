@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Errorise;
+namespace KGun\Errorise;
 
 class Error
 {
