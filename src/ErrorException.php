@@ -27,13 +27,13 @@ class ErrorException extends \ErrorException
     /**
      * Constructor.
      *
-     * @param string              $message
-     * @param int                 $code
-     * @param int                 $severity
-     * @param string              $file
-     * @param int                 $line
-     * @param Throwable           $previous
-     * @param KGun\Errorise\Error $error
+     * @param string                   $message
+     * @param int                      $code
+     * @param int                      $severity
+     * @param string|null              $file
+     * @param int|null                 $line
+     * @param Throwable|null           $previous
+     * @param KGun\Errorise\Error|null $error
      */
     public function __construct(
         string $message = '', int $code = 0, int $severity = E_ERROR,
