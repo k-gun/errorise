@@ -1,0 +1,14 @@
+{
+    "name": "k-gun/errorise",
+    "homepage": "https://github.com/k-gun/errorise",
+    "description": "An elegant way to handle errors in PHP.",
+    "keywords": ["error", "error handling"],
+    "license": "Apache-2.0",
+    "authors": [{"name": "Kerem Güneş"}],
+    "require": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
