@@ -117,7 +117,7 @@ class ErrorHandler
      */
     public function throwFor(string $function, int $code = 0): void
     {
-        if ($this->error && strtolower($this->error->getFunction()) == strtolower($function)) {
+        if ($this->error && strtolower($this->error->getFunction() . '') == strtolower($function)) {
             $this->throw($code);
         }
     }
@@ -132,7 +132,7 @@ class ErrorHandler
      */
     public function throwForMatch(string $pattern, int $code = 0): void
     {
-        if ($this->error && preg_match($pattern, $this->error->getMessage())) {
+        if ($this->error && preg_match($pattern, $this->error->getMessage() . '')) {
             $this->throw($code);
         }
     }
