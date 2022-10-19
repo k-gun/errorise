@@ -139,9 +139,9 @@ try {
 }
 ```
 
-### Using `ErrorWrapper` as All-in-One
+### Using `ErrorWrapper`
 
-You can use `ErrorWrapper` to wrap your calls instead of using try/catch block.
+You can use `ErrorWrapper` to wrap your calls instead of using try/catch blocks.
 
 ```php
 use KGun\Errorise\{ErrorWrapper, ErrorException};
