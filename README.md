@@ -149,7 +149,7 @@ use KGun\Errorise\{ErrorWrapper, ErrorException};
 $ret = ErrorWrapper::wrap(function () {
     $fp = fopen('/path/to/file.txt', 'r');
     return $fp;
-}, $e);
+}, $e /* byref */);
 
 assert($ret == false);
 assert($e instanceof ErrorException);
