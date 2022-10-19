@@ -41,12 +41,9 @@ try {
     // Throws if any error occured with message pattern.
     $eh->throwForMatch('/fopen/');
 } catch (ErrorException $e) {
-    // Message: fopen(/path/to/file.txt): Failed to open ...
-    // Throw your custom exception after some business.
-    throw new YourCustomException($e->getMessage());
+    // ...
 } finally {
-    // Trigger handler __destruct() to call unregister().
-    unset($eh);
+    // ...
 }
 ```
 
@@ -63,11 +60,10 @@ try {
     $eh->throw();
 } catch (ErrorException $e) {
     // Message: Undefined variable $foo.
-    // Throw your custom exception after some business.
+    // ...
     throw new YourCustomException($e->getMessage());
 } finally {
-    // Trigger handler __destruct() to call unregister().
-    unset($eh);
+    // ...
 }
 ```
 
@@ -81,13 +77,12 @@ try {
     // Register Errorise error handler.
     $eh->register();
 
-    // Some error-prone works.
+    // Some risky or error-prone works.
 
     // Throws if any error occured.
     $eh->throw();
 } catch (ErrorException $e) {
-    // Throw your custom exception after some business.
-    throw new YourCustomException($e->getMessage());
+    // ...
 } finally {
     // Un-Register Errorise error handler.
     // So, back to the previous or internal error handler.
