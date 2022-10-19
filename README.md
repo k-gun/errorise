@@ -49,7 +49,7 @@ try {
 
 ### Using `ErrorHandler` for Undefined Variables
 
-Like for function errors, `ErrorHandler` is available for undefined variable errors as well (in case):
+Like for function errors, `ErrorHandler` is available for undefined variable errors as well:
 
 ```php
 try {
@@ -108,7 +108,7 @@ try {
 
 ### Utilising `Error` Object
 
-To get more details (in case), you can utilise the `$error` property of the `ErrorHandler` which is passed to the caught `ErrorException`.
+To get more details, you can utilise the `$error` property of the `ErrorHandler` which is passed to the caught `ErrorException`.
 
 ```php
 try {
