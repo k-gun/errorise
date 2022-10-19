@@ -1,7 +1,7 @@
 <?php
-// Manual Test:
-// ~/.composer/vendor/bin/phpunit --bootstrap=./boot.php ErrorTest.php
-// ~/.composer/vendor/bin/phpunit --bootstrap=./boot.php ErrorTest.php --colors --testdox
+// Runs.
+// vendor/bin/phpunit --bootstrap=./boot.php ./
+// vendor/bin/phpunit --bootstrap=./boot.php ./ --colors --testdox
 namespace KGun\Errorise;
 
 // Register autoload.
