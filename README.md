@@ -49,7 +49,7 @@ try {
 
 ### Using `ErrorHandler` for Undefined Variables
 
-Likewise for function errors, `ErrorHandler` is available for undefined variable errors as well (in case):
+Like for function errors, `ErrorHandler` is available for undefined variable errors as well (in case):
 
 ```php
 try {
@@ -87,6 +87,7 @@ try {
     $eh->unregister();
 }
 ```
+
 ### Getting Errors Messages
 
 You can get error messages by using two methods of caught `ErrorException`.
