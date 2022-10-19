@@ -18,8 +18,9 @@ try {
     $eh->throw();
 } catch (ErrorException $e) {
     // Message: fopen(/path/to/file.txt): Failed to open ...
-    // Throw your custom exception after some business.
-    throw new YourCustomException($e->getMessage());
+    throw new YourCustomException_After_Some_Business(
+        $e->getMessage()
+    );
 } finally {
     // Trigger handler __destruct() to call unregister().
     unset($eh);
@@ -59,7 +60,6 @@ try {
 } catch (ErrorException $e) {
     // Message: Undefined variable $foo.
     // ...
-    throw new YourCustomException($e->getMessage());
 } finally {
     // ...
 }
