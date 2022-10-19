@@ -87,7 +87,7 @@ try {
 }
 ```
 
-### Getting Errors Messages
+### Getting Error Messages in Catch
 
 You can get error messages by using two methods of caught `ErrorException`.
 
