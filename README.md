@@ -5,7 +5,7 @@ If you are tired of using the `@` error suppression operator and then digging fo
 composer require k-gun/errorise
 ```
 
-### Using Handler
+### Using `ErrorHandler`
 
 ```php
 use KGun\Errorise\{ErrorHandler, ErrorException};
@@ -26,7 +26,7 @@ try {
 }
 ```
 
-### Using Handler for specific functions / message patterns.
+### Using `ErrorHandler` for Specific Functions / Patterns
 
 You can controll that when to throw for which function or message pattern.
 
@@ -50,7 +50,7 @@ try {
 }
 ```
 
-### Using Handler for undefined variables.
+### Using `ErrorHandler` for Undefined Variables
 
 Handler is available for undefined variables as well (in case):
 
@@ -71,7 +71,7 @@ try {
 }
 ```
 
-### Using Handler with non-auto mode.
+### Using `ErrorHandler` with Non-Auto Mode
 
 If you want full controll on register / unregister routine, pass `$auto` argument as `false`, just like:
 
@@ -94,7 +94,7 @@ try {
     $eh->unregister();
 }
 ```
-### Getting errors messages.
+### Getting Errors Messages
 
 You can get the errors messages by using two methods of caught ErrorException.
 
@@ -112,9 +112,9 @@ try {
 }
 ```
 
-### Utilising Error object.
+### Utilising `Error` Object
 
-You can utilise the `$error` property of the Handler which passed to the caught ErrorException to achive more details (in case).
+You can utilise the `$error` property of the Handler which is passed to the caught ErrorException to achieve more details (in case).
 
 ```php
 try {
