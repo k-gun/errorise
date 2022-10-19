@@ -130,6 +130,10 @@ try {
 
     // Line: 3, where mkdir() was called.
     $error->getLine();
+
+    // Function / Variable Name.
+    $error->getFunction();
+    $error->getVariable();
 } finally {
     // ...
 }
