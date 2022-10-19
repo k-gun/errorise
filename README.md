@@ -29,7 +29,7 @@ try {
 
 ### Using `ErrorHandler` for Specific Functions / Patterns
 
-You can controll that when to throw for which function or message pattern.
+You can controll that when to throw or for which function or message pattern to throw.
 
 ```php
 try {
@@ -49,7 +49,7 @@ try {
 
 ### Using `ErrorHandler` for Undefined Variables
 
-Handler is available for undefined variables as well (in case):
+Likewise for function errors, `ErrorHandler` is available for undefined variable errors as well (in case):
 
 ```php
 try {
@@ -89,7 +89,7 @@ try {
 ```
 ### Getting Errors Messages
 
-You can get the errors messages by using two methods of caught ErrorException.
+You can get error messages by using two methods of caught `ErrorException`.
 
 ```php
 try {
@@ -107,7 +107,7 @@ try {
 
 ### Utilising `Error` Object
 
-You can utilise the `$error` property of the Handler which is passed to the caught ErrorException to achieve more details (in case).
+To get more details (in case), you can utilise the `$error` property of the `ErrorHandler` which is passed to the caught `ErrorException`.
 
 ```php
 try {
@@ -128,7 +128,7 @@ try {
     // File: /tmp/php/errorise/test.php
     $error->getFile();
 
-    // Line: 3, where mkdir() called.
+    // Line: 3, where mkdir() was called.
     $error->getLine();
 } finally {
     // ...
