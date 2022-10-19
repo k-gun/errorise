@@ -31,7 +31,6 @@ try {
 You can controll that when to throw for which function or message pattern.
 
 ```php
-$eh = new ErrorHandler();
 try {
     fopen('/path/to/file.txt', 'r');
 
@@ -52,7 +51,6 @@ try {
 Handler is available for undefined variables as well (in case):
 
 ```php
-$eh = new ErrorHandler();
 try {
     $bar = $foo;
 
