@@ -138,3 +138,19 @@ try {
     // ...
 }
 ```
+
+### Using `ErrorWrapper` as All-in-One
+
+You can use `ErrorWrapper` to wrap your calls instead of using try/catch block.
+
+```php
+use KGun\Errorise\{ErrorWrapper, ErrorException};
+
+$ret = ErrorWrapper::wrap(function () {
+    $fp = fopen('/path/to/file.txt', 'r');
+    return $fp;
+}, $e);
+
+assert($ret == false);
+assert($e instanceof ErrorException);
+```
