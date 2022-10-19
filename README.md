@@ -58,7 +58,6 @@ try {
     // Throws since $foo is undefined.
     $eh->throw();
 } catch (ErrorException $e) {
-    // Message: Undefined variable $foo.
     // ...
 } finally {
     // ...
