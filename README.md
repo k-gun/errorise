@@ -31,8 +31,6 @@ try {
 You can controll that when to throw for which function or message pattern.
 
 ```php
-use KGun\Errorise\{ErrorHandler, ErrorException};
-
 $eh = new ErrorHandler();
 try {
     fopen('/path/to/file.txt', 'r');
@@ -57,8 +55,6 @@ try {
 Handler is available for undefined variables as well (in case):
 
 ```php
-use KGun\Errorise\{ErrorHandler, ErrorException};
-
 $eh = new ErrorHandler();
 try {
     $bar = $foo;
@@ -80,8 +76,6 @@ try {
 If you want full controll on register / unregister routine, pass `$auto` argument as `false`, just like:
 
 ```php
-use KGun\Errorise\{ErrorHandler, ErrorException};
-
 $eh = new ErrorHandler(false);
 try {
     // Register Errorise error handler.
@@ -98,5 +92,52 @@ try {
     // Un-Register Errorise error handler.
     // So, back to the previous or internal error handler.
     $eh->unregister();
+}
+```
+### Getting errors messages.
+
+You can get the errors messages by using two methods of caught ErrorException.
+
+```php
+try {
+    // ...
+} catch (ErrorException $e) {
+    // Message: mkdir(): No such file or directory
+    $e->getMessage();
+
+    // Message: No such file or directory
+    $e->getPureMessage();
+} finally {
+    // ...
+}
+```
+
+### Utilising Error object.
+
+You can utilise the `$error` property of the Handler which passed to the caught ErrorException to achive more details (in case).
+
+```php
+try {
+    // ...
+} catch (ErrorException $e) {
+    // @var KGun\Errorise\Error
+    $error = $e->error();
+
+    // Data: [severity, message, file, line]
+    $data = $error->data();
+
+    // Severity: 2
+    $error->getSeverity();
+
+    // Message: mkdir(): No such file or directory
+    $error->getMessage();
+
+    // File: /tmp/php/errorise/test.php
+    $error->getFile();
+
+    // Line: 3, where mkdir() called.
+    $error->getLine();
+} finally {
+    // ...
 }
 ```
