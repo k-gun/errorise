@@ -6,10 +6,10 @@
     "license": "Apache-2.0",
     "authors": [{"name": "Kerem Güneş"}],
     "require": {
-        "php": "~7.4"
+        "php": ">=7.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "~9.0"
+        "phpunit/phpunit": ">=9.0"
     },
     "autoload": {
         "classmap": ["src/"]
