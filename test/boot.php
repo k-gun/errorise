@@ -6,9 +6,8 @@ namespace KGun\Errorise;
 
 // Register autoload.
 spl_autoload_register(function ($name) {
-    static $prefix = __NAMESPACE__ . '\\';
-    if (strpos($name, $prefix) === 0) {
-        $name = strtr(substr($name, strlen($prefix)), '\\', '/');
+    if (strpos($name, __NAMESPACE__) === 0) {
+        $name = strtr(substr($name, strlen(__NAMESPACE__)), '\\', '/');
         $file = realpath(__DIR__ . '/../src/' . $name . '.php');
         $file && require $file;
     }
