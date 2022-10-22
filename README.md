@@ -155,7 +155,7 @@ assert($e instanceof Errorise\ErrorException);
 
 ### Manually Handling the Last Errors
 
-You can use `LastErrorException` to throw errors after checking call results.
+You can use `LastErrorException` to throw errors after checking your call results.
 
 ```php
 use KGun\Errorise;
