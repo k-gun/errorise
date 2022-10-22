@@ -8,15 +8,15 @@ composer require k-gun/errorise
 ### Using `ErrorHandler`
 
 ```php
-use KGun\Errorise\{ErrorHandler, ErrorException};
+use KGun\Errorise;
 
-$eh = new ErrorHandler();
+$eh = new Errorise\ErrorHandler();
 try {
     fopen('/path/to/file.txt', 'r');
 
     // Throws if any error occured.
     $eh->throw();
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // Message: fopen(/path/to/file.txt): Failed to open ...
     throw new YourCustomException_After_Some_Business(
         $e->getMessage()
@@ -40,7 +40,7 @@ try {
 
     // Throws if any error occured with message pattern.
     $eh->throwForMatch('/fopen/');
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // ...
 } finally {
     // ...
@@ -57,7 +57,7 @@ try {
 
     // Throws since $foo is undefined.
     $eh->throw();
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // ...
 } finally {
     // ...
@@ -69,7 +69,7 @@ try {
 If you want full controll on register / unregister routine, pass `$auto` argument as `false`, just like:
 
 ```php
-$eh = new ErrorHandler(false);
+$eh = new Errorise\ErrorHandler(false);
 try {
     // Register Errorise error handler.
     $eh->register();
@@ -78,7 +78,7 @@ try {
 
     // Throws if any error occured.
     $eh->throw();
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // ...
 } finally {
     // Un-Register Errorise error handler.
@@ -94,7 +94,7 @@ You can get error messages by using two methods of caught `ErrorException`.
 ```php
 try {
     // ...
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // Message: mkdir(): No such file or directory
     $e->getMessage();
 
@@ -112,7 +112,7 @@ To get more details, you can utilise the `$error` property of the `ErrorHandler`
 ```php
 try {
     // ...
-} catch (ErrorException $e) {
+} catch (Errorise\ErrorException $e) {
     // @var KGun\Errorise\Error
     $error = $e->error();
 
@@ -144,13 +144,11 @@ try {
 You can use `ErrorWrapper` to wrap your calls instead of using try/catch blocks.
 
 ```php
-use KGun\Errorise\{ErrorWrapper, ErrorException};
-
-$ret = ErrorWrapper::wrap(function () {
+$ret = Errorise\ErrorWrapper::wrap(function () {
     $fp = fopen('/path/to/file.txt', 'r');
     return $fp;
 }, $e /* byref */);
 
 assert($ret == false);
-assert($e instanceof ErrorException);
+assert($e instanceof Errorise\ErrorException);
 ```
