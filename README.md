@@ -152,3 +152,33 @@ $ret = Errorise\ErrorWrapper::wrap(function () {
 assert($ret == false);
 assert($e instanceof Errorise\ErrorException);
 ```
+
+### Manually Handling the Last Errors
+
+You can use `LastErrorException` to throw errors after checking call results.
+
+```php
+use KGun\Errorise;
+
+// Your filesystem module.
+class FileSystem {
+    public static function createDirectory(
+        string $dir, int $mode = 0777, bool $recursive = false
+    ): void {
+        $ok = @mkdir($dir, $mode, $recursive);
+        if (!$ok) {
+            throw new Errorise\LastErrorException();
+        }
+    }
+}
+
+// Your client layer.
+try {
+    FileSystem::createDirectory('/tmp');
+} catch (Errorise\LastErrorException $e) {
+    // Message: mkdir(): File exists
+    throw new YourCustomException_After_Some_Business(
+        $e->getMessage()
+    );
+}
+```
