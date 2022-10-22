@@ -65,7 +65,7 @@ class ErrorException extends \ErrorException
      */
     public function getPureMessage(): string
     {
-        preg_match('~^(?:\w+)\([^)]*\):\s*(.+)~', $this->message, $match);
+        preg_match('~^\w+\([^)]*\):\s*(.+)~', $this->message, $match);
 
         return $match[1] ?? $this->message;
     }
