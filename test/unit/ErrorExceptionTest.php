@@ -14,8 +14,6 @@ class ErrorExceptionTest extends PHPUnit\Framework\TestCase
             $line     = 0,
         );
 
-        $this->assertInstanceOf(\ErrorException::class, $ex);
-
         $this->assertSame($severity, $ex->getSeverity());
         $this->assertSame($message, $ex->getMessage());
         $this->assertSame($code, $ex->getCode());
@@ -25,5 +23,7 @@ class ErrorExceptionTest extends PHPUnit\Framework\TestCase
 
         $this->assertNull($ex->error());
         $this->assertSame('No such file or directory', $ex->getPureMessage());
+
+        $this->assertInstanceOf(\ErrorException::class, $ex);
     }
 }

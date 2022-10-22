@@ -1,7 +1,7 @@
 <?php
-// Runs.
-// vendor/bin/phpunit --bootstrap=./boot.php ./
-// vendor/bin/phpunit --bootstrap=./boot.php ./ --colors --testdox
+// Run:
+// vendor/bin/phpunit --bootstrap=./boot.php ./unit
+// vendor/bin/phpunit --bootstrap=./boot.php ./unit --colors --testdox
 namespace KGun\Errorise;
 
 // Register autoload.
