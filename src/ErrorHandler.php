@@ -83,7 +83,7 @@ class ErrorHandler
      * Un-Register error handler for once.
      *
      * Note: Before calling this method, `register()` method must be called at top of
-     * `try/catch {..}` block in order to overriding previous or internal error handler.
+     * `try/catch {..}` block in order to override previous or internal error handler.
      *
      * @return void
      */

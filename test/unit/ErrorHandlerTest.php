@@ -35,7 +35,7 @@ class ErrorHandlerTest extends PHPUnit\Framework\TestCase
             $this->assertInstanceOf(\ErrorException::class, $e);
         } finally {
             // ..
-            $eh->register();
+            $eh->unregister();
         }
     }
 
