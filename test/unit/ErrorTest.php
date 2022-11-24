@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use KGun\Errorise\Error;
+use Errorise\Error;
 
 class ErrorTest extends PHPUnit\Framework\TestCase
 {

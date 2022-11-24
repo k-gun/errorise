@@ -1,17 +1,17 @@
 <?php
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/k-gun/errorise
+ * Apache License 2.0 · https://github.com/okerem/errorise
  */
 declare(strict_types=1);
 
-namespace KGun\Errorise;
+namespace Errorise;
 
 /**
  * Exception class for last occured errors.
  *
- * @package KGun\Errorise
- * @object  KGun\Errorise\LastErrorException
+ * @package Errorise
+ * @object  Errorise\LastErrorException
  * @author  Kerem Güneş
  */
 class LastErrorException extends ErrorException

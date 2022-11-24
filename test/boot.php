@@ -2,7 +2,7 @@
 // Run:
 // vendor/bin/phpunit --bootstrap=./boot.php ./unit
 // vendor/bin/phpunit --bootstrap=./boot.php ./unit --colors --testdox
-namespace KGun\Errorise;
+namespace Errorise;
 
 // Register autoload.
 spl_autoload_register(function ($name) {

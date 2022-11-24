@@ -1,17 +1,17 @@
 <?php
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/k-gun/errorise
+ * Apache License 2.0 · https://github.com/okerem/errorise
  */
 declare(strict_types=1);
 
-namespace KGun\Errorise;
+namespace Errorise;
 
 /**
  * Error class for holding / accessing error data.
  *
- * @package KGun\Errorise
- * @object  KGun\Errorise\Error
+ * @package Errorise
+ * @object  Errorise\Error
  * @author  Kerem Güneş
  * @internal
  */

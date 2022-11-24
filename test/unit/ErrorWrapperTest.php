@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use KGun\Errorise\{ErrorWrapper, ErrorException};
+use Errorise\{ErrorWrapper, ErrorException};
 
 class ErrorWrapperTest extends PHPUnit\Framework\TestCase
 {

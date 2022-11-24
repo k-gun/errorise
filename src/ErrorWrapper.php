@@ -1,17 +1,17 @@
 <?php
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/k-gun/errorise
+ * Apache License 2.0 · https://github.com/okerem/errorise
  */
 declare(strict_types=1);
 
-namespace KGun\Errorise;
+namespace Errorise;
 
 /**
  * Wrapper class for wrapping a call routine.
  *
- * @package KGun\Errorise
- * @object  KGun\Errorise\ErrorWrapper
+ * @package Errorise
+ * @object  Errorise\ErrorWrapper
  * @author  Kerem Güneş
  */
 class ErrorWrapper

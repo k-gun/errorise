@@ -2,7 +2,7 @@
 // Run:
 // php -f test.php
 // php -f test.php 100000
-namespace KGun\Errorise;
+namespace Errorise;
 
 require __DIR__ . '/../boot.php';
 

@@ -1,18 +1,18 @@
 <?php
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/k-gun/errorise
+ * Apache License 2.0 · https://github.com/okerem/errorise
  */
 declare(strict_types=1);
 
-namespace KGun\Errorise;
+namespace Errorise;
 
 /**
  * Handler class for registering, unregistering error handler and
  * throwing the last occured error.
  *
- * @package KGun\Errorise
- * @object  KGun\Errorise\ErrorHandler
+ * @package Errorise
+ * @object  Errorise\ErrorHandler
  * @author  Kerem Güneş
  */
 class ErrorHandler
@@ -27,7 +27,7 @@ class ErrorHandler
     /**
      * Error data holder.
      *
-     * @var KGun\Errorise\Error|null
+     * @var Errorise\Error|null
      * @readonly
      */
     private ?Error $error = null;
@@ -54,7 +54,7 @@ class ErrorHandler
     /**
      * Get error property.
      *
-     * @return KGun\Errorise\Error|null
+     * @return Errorise\Error|null
      */
     public function error(): ?Error
     {
@@ -97,7 +97,7 @@ class ErrorHandler
      *
      * @param  int $code
      * @return void
-     * @throws KGun\Errorise\ErrorException
+     * @throws Errorise\ErrorException
      */
     public function throw(int $code = 0): void
     {
@@ -113,7 +113,7 @@ class ErrorHandler
      * @param  string $function
      * @param  int    $code
      * @return void
-     * @causes KGun\Errorise\ErrorException
+     * @causes Errorise\ErrorException
      */
     public function throwFor(string $function, int $code = 0): void
     {
@@ -128,7 +128,7 @@ class ErrorHandler
      * @param  string $pattern
      * @param  int    $code
      * @return void
-     * @causes KGun\Errorise\ErrorException
+     * @causes Errorise\ErrorException
      */
     public function throwForMatch(string $pattern, int $code = 0): void
     {

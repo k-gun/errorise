@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-use KGun\Errorise\{LastErrorException, ErrorException};
+use Errorise\{LastErrorException, ErrorException};
 
 class LastErrorExceptionTest extends PHPUnit\Framework\TestCase
 {

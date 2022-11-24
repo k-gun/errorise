@@ -1,17 +1,17 @@
 <?php
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/k-gun/errorise
+ * Apache License 2.0 · https://github.com/okerem/errorise
  */
 declare(strict_types=1);
 
-namespace KGun\Errorise;
+namespace Errorise;
 
 /**
  * Exception class for controlled try/catch routines.
  *
- * @package KGun\Errorise
- * @object  KGun\Errorise\ErrorException
+ * @package Errorise
+ * @object  Errorise\ErrorException
  * @author  Kerem Güneş
  */
 class ErrorException extends \ErrorException
@@ -19,7 +19,7 @@ class ErrorException extends \ErrorException
     /**
      * Error data holder.
      *
-     * @var KGun\Errorise\Error|null
+     * @var Errorise\Error|null
      * @readonly
      */
     private Error $error;
@@ -33,7 +33,7 @@ class ErrorException extends \ErrorException
      * @param string|null              $file
      * @param int|null                 $line
      * @param Throwable|null           $previous
-     * @param KGun\Errorise\Error|null $error
+     * @param Errorise\Error|null $error
      */
     public function __construct(
         string $message = '', int $code = 0, int $severity = E_ERROR,
@@ -51,7 +51,7 @@ class ErrorException extends \ErrorException
     /**
      * Get error property.
      *
-     * @return KGun\Errorise\Error|null
+     * @return Errorise\Error|null
      */
     public function error(): ?Error
     {

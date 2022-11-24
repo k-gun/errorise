@@ -2,13 +2,13 @@ If you are tired of using the `@` error suppression operator and then digging fo
 
 ### Installing
 ```
-composer require k-gun/errorise
+composer require okerem/errorise
 ```
 
 ### Using `ErrorHandler`
 
 ```php
-use KGun\Errorise;
+use Errorise;
 
 $eh = new Errorise\ErrorHandler();
 try {
@@ -113,7 +113,7 @@ To get more details, you can utilise the `$error` property of the `ErrorHandler`
 try {
     // ...
 } catch (Errorise\ErrorException $e) {
-    // @var KGun\Errorise\Error
+    // @var Errorise\Error
     $error = $e->error();
 
     // Data: [severity, message, file, line]
@@ -158,7 +158,7 @@ assert($e instanceof Errorise\ErrorException);
 You can use `LastErrorException` to throw errors after checking your call results.
 
 ```php
-use KGun\Errorise;
+use Errorise;
 
 // Your filesystem module.
 class FileSystem {
