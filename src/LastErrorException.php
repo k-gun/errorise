@@ -22,7 +22,7 @@ class LastErrorException extends ErrorException
      * @var array
      */
     private static array $lastErrorDefault = [
-        'type' => 0,    'message' => 'No error',
+        'type' => 0,    'message' => '',
         'file' => null, 'line'    => null,
     ];
 

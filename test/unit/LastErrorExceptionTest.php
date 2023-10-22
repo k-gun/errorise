@@ -9,8 +9,8 @@ class LastErrorExceptionTest extends PHPUnit\Framework\TestCase
         $ex = new LastErrorException();
 
         $this->assertSame(0, $ex->getSeverity());
-        $this->assertSame('No error', $ex->getMessage());
-        $this->assertSame('No error', $ex->getPureMessage());
+        $this->assertSame('', $ex->getMessage());
+        $this->assertSame('', $ex->getPureMessage());
         $this->assertNull($ex->error()->getFunction());
 
         // Required for "@", because of PHPUnit.
