@@ -11,7 +11,7 @@ namespace Errorise;
  * Exception class for controlled try/catch routines.
  *
  * @package Errorise
- * @object  Errorise\ErrorException
+ * @class   Errorise\ErrorException
  * @author  Kerem Güneş
  */
 class ErrorException extends \ErrorException

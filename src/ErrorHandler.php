@@ -12,7 +12,7 @@ namespace Errorise;
  * throwing the last occured error.
  *
  * @package Errorise
- * @object  Errorise\ErrorHandler
+ * @class   Errorise\ErrorHandler
  * @author  Kerem Güneş
  */
 class ErrorHandler

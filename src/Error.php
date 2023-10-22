@@ -11,7 +11,7 @@ namespace Errorise;
  * Error class for holding / accessing error data.
  *
  * @package Errorise
- * @object  Errorise\Error
+ * @class   Errorise\Error
  * @author  Kerem Güneş
  * @internal
  */

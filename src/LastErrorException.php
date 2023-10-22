@@ -11,7 +11,7 @@ namespace Errorise;
  * Exception class for last occured errors.
  *
  * @package Errorise
- * @object  Errorise\LastErrorException
+ * @class   Errorise\LastErrorException
  * @author  Kerem Güneş
  */
 class LastErrorException extends ErrorException

@@ -11,7 +11,7 @@ namespace Errorise;
  * Wrapper class for wrapping a call routine.
  *
  * @package Errorise
- * @object  Errorise\ErrorWrapper
+ * @class   Errorise\ErrorWrapper
  * @author  Kerem Güneş
  */
 class ErrorWrapper
