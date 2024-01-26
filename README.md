@@ -2,7 +2,7 @@ If you are tired of using the `@` error suppression operator and then digging fo
 
 ### Installing
 ```
-composer require okerem/errorise
+composer require krmgns/errorise
 ```
 
 ### Using `ErrorHandler`

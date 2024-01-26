@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/okerem/errorise
+ * Apache License 2.0 · https://github.com/krmgns/errorise
  */
 namespace Errorise;
 

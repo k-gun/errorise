@@ -1,6 +1,6 @@
 {
-    "name": "okerem/errorise",
-    "homepage": "https://github.com/okerem/errorise",
+    "name": "krmgns/errorise",
+    "homepage": "https://github.com/krmgns/errorise",
     "description": "An elegant way to handle errors in PHP.",
     "keywords": ["error", "error handling"],
     "license": "Apache-2.0",

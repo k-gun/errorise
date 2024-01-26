@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 /**
  * Copyright (c) 2022 · Kerem Güneş
- * Apache License 2.0 · https://github.com/okerem/errorise
+ * Apache License 2.0 · https://github.com/krmgns/errorise
  */
 namespace Errorise;
 
@@ -115,7 +115,7 @@ class ErrorHandler
      */
     public function throwFor(string $function, int $code = 0): void
     {
-        if ($this->error && strtolower($this->error->getFunction() . '') == strtolower($function)) {
+        if ($this->error && strtolower($this->error->getFunction() ?? '') === strtolower($function)) {
             $this->throw($code);
         }
     }
